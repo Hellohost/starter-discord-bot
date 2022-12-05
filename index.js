@@ -189,6 +189,13 @@ cron.schedule(
   },
   timezoneCron
 );
+cron.schedule(
+  "30 38 21 5 12 *",
+  async (ctx) => {
+    bot.telegram.sendMessage(pot, 'Where is the Money, Lebowski?');
+  },
+  timezoneCron
+);
 bot.start((ctx) => {
   return ctx.reply(
     "Custom buttons keyboard",
